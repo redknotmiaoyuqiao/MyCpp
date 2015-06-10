@@ -8,11 +8,41 @@
 
 #include "function.h"
 
+int space(PCB * ready){
+    int l = 0;
+    PCB * pr = ready;
+    
+    while (pr != NULL) {
+        l++;
+        pr = pr->link;
+    }
+    return l;
+}
 
-#define getpch(type) (type*)malloc(sizeof(type));
-
-void input(){
-    int i,num;
+void input(PCB * p,PCB *ready){
+    int num;
+    printf("请输入进程数\n");
+    
+    scanf("%d",&num);
+    
+    for(int i=0;i<num;i++){
+        printf("\n 进程号：%d \n",i);
+        p = (PCB*)malloc(sizeof(PCB));
+        printf("\n 进程名 \n");
+        scanf("%s",p->name);
+        
+        printf("\n 优先级 \n");
+        scanf("%d",&(p->super));
+        
+        printf("\n 运行时间 \n");
+        scanf("%d",&(p->ntime));
+        
+        p->rtime = 0;
+        p->state = 'w';
+        p->link = NULL;
+        
+        sort(ready, p);
+    }
 }
 
 void p_check(PCB * p,PCB * ready){

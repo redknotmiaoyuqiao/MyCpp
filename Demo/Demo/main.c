@@ -16,14 +16,39 @@ PCB * ready = NULL;
 PCB * p;
 
 int main() {
-    PCB * pr = malloc(sizeof(PCB));
+    int len;
+    int h = 0;
     
-    pr->state = 'c';
-    pr->super = 1;
-    pr->ntime = 15;
-    pr->rtime = 17;
+    char ch;
     
+    input(p,ready);
     
-    disp(pr);
+    len = space();
+    
+    printf("%d",len);
+    
+    while((len != 0) && (ready != NULL)){
+        ch = getchar();
+        h++;
+        printf("\n The Execute Number : %d \n",h);
+        
+        p = ready;
+        ready = p->link;
+        
+        p->link = NULL;
+        p->state = 'R';
+        
+        p_check(p,ready);
+        
+        running(p ,ready);
+        
+        printf("press any key conuine");
+        
+        ch = getchar();
+    }
+    
+    printf("mission complete!!");
+    ch = getchar();
+    
     return 0;
 }
