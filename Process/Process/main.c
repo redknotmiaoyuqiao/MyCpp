@@ -10,17 +10,18 @@
 #include <stdlib.h>
 #include "pcb.h"
 
-
-int * func(int i){
-    int target[10] = {1,2,3,4,5};
-    
-    int * p = target;
-    
-    return p;
-}
+PCB * pcb;
 
 int main(int argc, const char * argv[]) {
-    int * p = func(0);
+    pcb = initPCB();
     
-    printf("%d",p[1]);
+    insertPCB(pcb,7);
+    insertPCB(pcb,5);
+    insertPCB(pcb,8);
+    insertPCB(pcb,1);
+    insertPCB(pcb,5);
+    
+    
+    //printf("%d",getSize(pcb));
+    show(pcb);
 }
