@@ -72,7 +72,7 @@ step2: cout<<"\n输入发出请求的进程（输入 “0”退出系统）: ";
         goto step1;
     }
     else
-    {
+    {//
         /*不能分配，显示原因*/
         Forbidenseason(decide);
         goto step2;
