@@ -13,15 +13,6 @@
 PCB * pcb;
 
 int main(int argc, const char * argv[]) {
-    pcb = initPCB();
     
-    insertPCB(pcb,7);
-    insertPCB(pcb,5);
-    insertPCB(pcb,8);
-    insertPCB(pcb,1);
-    insertPCB(pcb,5);
-    
-    
-    //printf("%d",getSize(pcb));
-    show(pcb);
+    /////
 }

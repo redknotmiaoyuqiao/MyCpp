@@ -28,7 +28,9 @@ int getSize(PCB * pcb)
     return size;
 }
 
-
+void hello(){
+    
+}
 
 void insertPCB(PCB * pcb,int __super)
 {
