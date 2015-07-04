@@ -38,7 +38,7 @@ int main()
             cout<<"输入结束！\n";
             break;
         }
-        worknum++;
+        worknum++;//
     }
     if(workstep[0]==0)
     {
