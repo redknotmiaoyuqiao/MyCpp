@@ -5,16 +5,16 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>D5983127-2E84-4D6E-99A9-E8228BD25024</string>
+	<string>1D2F00A0-BDAF-4D0D-A460-A665CFAD7921</string>
 	<key>IDESourceControlProjectName</key>
-	<string>Bank</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>47BC76F037CC240EC141BE4E8BA0848071E257E9</key>
 		<string>https://github.com/redknotmiaoyuqiao/MyCpp.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Bank/Bank.xcodeproj</string>
+	<string>FIFO/FIFO.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>47BC76F037CC240EC141BE4E8BA0848071E257E9</key>
