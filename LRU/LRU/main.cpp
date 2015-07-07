@@ -11,6 +11,8 @@
 
 using namespace std;
 
+int n;
+
 int main()
 {
     int input=0;                                   //用于输入作业号
@@ -23,7 +25,7 @@ int main()
     for(int i=0;i<MAXSIZE;i++)
     {
         stack[i]=0;
-        workstep[i]=0;
+        workstep[i]=-1;
     }
     cout<<"请输入存储区块数：";
     cin>>storesize;
@@ -35,7 +37,7 @@ int main()
         workstep[j]=input;
         if(input==-1)
         {
-            cout<<"输入结束！\n";
+            cout<<"输入结束！\n";///
             break;
         }
         worknum++;////////
@@ -63,20 +65,46 @@ int main()
                 stack[l]=workstep[k];
                 cout<<"发生中断，但内存中有空闲区，"<<workstep[k]<<"号页面直接调入！\n";
                 interrupt++;
-                goto step1;
+                
+                n = l;
+                
+                goto step2;
             }
         }
         /*上述情况都不成立则调出栈顶，将调入页面插入栈顶*/
         cout<<"发生中断，将"<<stack[0]<<"号页面调出，"<<workstep[k]<<"号装入！\n";
         interrupt++;
         /*新掉入的页面放栈顶*/
-        step1:	for(int m=0;m<storesize;m++)
+        
+        
+    step2:
+        if(n>storesize){
+            cout<<"error"<<endl;
+            return 0;
+        }
+        for(int m=n;m<storesize;m++){
+            stack[m]=stack[m+1];
+        }
+        stack[storesize-1]=workstep[k];
+        cout<<"作业"<<worknum<<"个，"<<"中断"<<interrupt<<"次，"<<"缺页率："<<float(interrupt)/float(worknum)*100<<"%\n";
+        
+        return 0;
+        
+    step1:
+        for(int m=0;m<storesize;m++)
         {
+            
             stack[m]=stack[m+1];
         }
         stack[storesize-1]=workstep[k];
         
     }
     cout<<"作业"<<worknum<<"个，"<<"中断"<<interrupt<<"次，"<<"缺页率："<<float(interrupt)/float(worknum)*100<<"%\n";
+}
+
+void ss1(){
+    for(){
+        
+    }
 }
 
