@@ -32,7 +32,7 @@ int main()
     cout<<"请输入作业的页面走向（输入-1结束）：\n";
     for(int j=0;j<MAXSIZE;j++)
     {
-        cout<<"页面号 "<<j+1;
+        cout<<"页面号 "<<j+1;///
         cin>>input;
         workstep[j]=input;
         if(input==-1)
